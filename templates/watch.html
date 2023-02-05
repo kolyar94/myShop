@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Онлайн магазин</title>
+{% endblock %}
+{% block body %}
+<section>
+    <div class="videobg">
+        <video src="/static/video/Watch.mp4" type="video/mp4" autoplay  ></video>
+    </div>
+ <div class="container marketing">
+
+    <div class="row">
+    <hr class="featurette-divider">
+    {{ watch }}
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">{{ watchs[0].title }}.</h2>
+        <h2 class="featurette-heading fw-normal lh-1" >{{ watchs[0].price }} Руб.</h2>
+        <p class="lead">{{ watchs[0].text }}</p>
+        <a href="/buy_watch/{{watchs[0].id}}"><button class="glow-on-hover" type="button">Купить</button></a>
+      </div>
+      <div class="col-md-5">
+        <img src="{{ watchs[0].file }}" width="400px"height="400px">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">{{ watchs[1].title }}.</h2>
+        <h2 class="featurette-heading fw-normal lh-1" >{{ watchs[1].price }} Руб.</h2>
+        <p class="lead">{{ watchs[1].text }}</p>
+        <a href="/buy_watch/{{watchs[1].id}}"><button class="glow-on-hover" type="button">Купить</button></a>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="{{ watchs[1].file }}" width="400px"height="400px">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">{{ watchs[2].title }}.</h2>
+        <h2 class="featurette-heading fw-normal lh-1" >{{ watchs[2].price }} Руб.</h2>
+        <p class="lead">{{ watchs[2].text }}</p>
+        <a href="/buy_watch/{{watchs[2].id}}"><button class="glow-on-hover" type="button">Купить</button></a>
+      </div>
+      <div class="col-md-5">
+        <img src="{{ watchs[2].file }}" width="400px"height="400px">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    </div>
+     <div class="col-lg-12 col-md-12 text-center mt-4">
+        <a href="/create_watch"><button type="button" class="btn btn-outline-secondary">Добавить</button></a>
+     </div>
+ </div>
+</section>
+
+
+{% endblock %}

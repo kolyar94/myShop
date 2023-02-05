@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Добавление товара (Watch)</title>
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <h1 class="pop">Добавление товара (Watch)</h1>
+
+    <form action="" method="post" enctype="multipart/form-data">
+    <input type="text" name="title" id="title" class="container form-control" placeholder="Введите название товара"><br>
+    <input type="number" name="price" id="price" class="container form-control" placeholder="Введите цену"><br>
+    <input type="text" name="descr" id="descr" class="container form-control" placeholder="Введите краткое описание"><br>
+    <textarea  name="text" id="text" class="container form-control" placeholder="Введите полное описание товара"></textarea><br>
+    <input type="file" name="file" id="file" class="tf" ><br>
+    <br><input type="submit" class="w-100 btn btn-primary btn-lg" value="Добавить">
+    </form>
+
+  </div>
+{% endblock %}

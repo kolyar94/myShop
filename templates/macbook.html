@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Онлайн магазин</title>
+{% endblock %}
+{% block body %}
+<section>
+    <div class="videobg">
+        <video src="/static/video/MacBook.mp4" type="video/mp4" autoplay  ></video>
+    </div>
+  <div class="container marketing">
+    <div class="row">
+    <hr class="featurette-divider">
+        {{ macbook }}
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">{{macbooks[0].title }}.</h2>
+        <h2 class="featurette-heading fw-normal lh-1">{{macbooks[0].price }} Руб.</h2>
+        <p class="lead">{{macbooks[0].text }}.</p>
+        <a href="/buy_mac/{{macbooks[0].id}}"><button class="glow-on-hover" type="button">Купить</button></a>
+      </div>
+      <div class="col-md-5">
+        <img src="{{macbooks[0].file}} " width="400px"height="400px">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">{{macbooks[1].title }}.</h2>
+        <h2 class="featurette-heading fw-normal lh-1">{{macbooks[1].price }} Руб.</h2>
+        <p class="lead">{{macbooks[1].text }}.</p>
+        <a href="/buy_mac/{{macbooks[1].id}}"><button class="glow-on-hover" type="button">Купить</button></a>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="{{macbooks[1].file }} " width="400px"height="400px">
+
+      </div>
+    </div>
+    </div>
+    </div>
+
+
+    <div class="col-lg-12 col-md-12 text-center mt-4">
+        <a href="/create_macbook"><button type="button" class="btn btn-outline-secondary">Добавить</button></a>
+     </div>
+</section>
+
+
+{% endblock %}

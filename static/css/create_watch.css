@@ -1,0 +1,39 @@
+.pop{
+color: white;
+opacity: .8;
+}
+
+.form-control {
+background-color: rgb(143, 142, 142);
+border-radius: 5px;
+}
+.form-control:focus{
+color: black;
+background-color:rgb(143, 142, 142);
+outline-color: rgb(0,255,255);
+box-shadow: 0px 0px 35px rgb(0,255,255);
+transition: 1s;
+}
+.tf{
+background-color: rgb(143, 142, 142);
+max-widht:190px;
+height: 30px;
+padding:0px;
+border: 2 px solid white;
+border-radius: 5px;
+}
+.tf:focus{
+color: rgb(0,255,255);
+background-color:#212121;
+outline-color: rgb(0,255,255);
+box-shadow: 0px 0px 35px rgb(0,255,255);
+transition: 1s;
+}
+
+.featurette-heading{
+color: white;
+}
+.lead{
+color: white;
+}
+
